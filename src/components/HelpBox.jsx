@@ -1,5 +1,19 @@
+import { string } from 'prop-types';
 
 import './HelpBox.css';
-import { HelpBox } from './HelpBox.1';
+
+function HelpBox({ title, text }) {
+  return (
+    <article className="help-box">
+      <h4>{title}</h4>
+      <p>{text}</p>
+    </article>
+  );
+}
+
+HelpBox.propTypes = {
+  title: string,
+  text: string,
+};
 
 export default HelpBox;
